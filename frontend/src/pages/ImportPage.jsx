@@ -282,11 +282,11 @@ export default function ImportPage() {
       {/* ── Step 2: Tabbed JSON Input ── */}
       <div className="bg-white border border-slate-200 mb-4">
         {/* Tab Bar */}
-        <div className="flex border-b border-slate-200">
-          <div className="px-6 py-4 shrink-0">
-            <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Step 2 — Provide JSON</p>
+        <div className="flex flex-col sm:flex-row border-b border-slate-200">
+          <div className="px-4 py-3 text-sm font-bold tracking-wider text-slate-500 uppercase flex items-center">
+            Step 2 — Provide JSON
           </div>
-          <div className="flex ml-auto border-l border-slate-200">
+          <div className="flex w-full sm:w-auto sm:ml-auto border-t sm:border-t-0 sm:border-l border-slate-200">
             {[
               { id: 'file', label: 'Upload File', icon: (
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -302,7 +302,7 @@ export default function ImportPage() {
               <button
                 key={id}
                 onClick={() => setActiveTab(id)}
-                className={`flex items-center gap-2 px-5 py-4 text-xs font-semibold uppercase tracking-wider transition-colors duration-150 border-b-2 ${
+                className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold uppercase tracking-wider transition-colors duration-150 border-b-2 ${
                   activeTab === id
                     ? 'border-blue-600 text-blue-600 bg-blue-50'
                     : 'border-transparent text-slate-400 hover:text-slate-600 hover:bg-slate-50'

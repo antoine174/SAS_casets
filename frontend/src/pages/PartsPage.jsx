@@ -201,7 +201,7 @@ export default function PartsPage() {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-slate-400 mb-6">
         <Link to="/suppliers" className="hover:text-blue-600 transition-colors">Suppliers</Link>
@@ -214,7 +214,7 @@ export default function PartsPage() {
       </nav>
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-semibold text-slate-800 tracking-tight">Parts Catalogue</h1>
           <p className="text-sm text-slate-500 mt-0.5">{parts.length} part{parts.length !== 1 ? 's' : ''} in this vehicle</p>
@@ -237,8 +237,8 @@ export default function PartsPage() {
           <p className="text-xs mt-1">Add parts manually or use JSON Import</p>
         </div>
       ) : (
-        <div className="bg-white border border-slate-200 overflow-x-auto">
-          <table className="w-full text-sm">
+        <div className="w-full overflow-x-auto border border-slate-200 rounded-sm">
+          <table className="w-full text-sm min-w-[700px]">
             <thead>
               <tr className="bg-slate-800 text-white text-left">
                 {['Part No.', 'Part Name', 'Material Type', 'Material Source', 'Unit Price', 'Images', 'Actions'].map((h) => (

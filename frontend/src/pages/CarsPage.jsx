@@ -69,7 +69,7 @@ export default function CarsPage() {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-slate-400 mb-6">
         <Link to="/suppliers" className="hover:text-blue-600 transition-colors">Suppliers</Link>
@@ -80,7 +80,7 @@ export default function CarsPage() {
       </nav>
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <h1 className="text-2xl font-semibold text-slate-800 tracking-tight">Vehicles</h1>
           <p className="text-sm text-slate-500 mt-0.5">Select a vehicle to view its parts catalogue</p>
